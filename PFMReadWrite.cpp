@@ -1,7 +1,7 @@
 /*
  *     PFM_ReadWrite
  *
- *     Author:  Antoine TOISOUL LE CANN
+ *     Author:  Antoine TOISOUL LE CANN, Imperial College London
  *
  *     Copyright © 2016 Antoine TOISOUL LE CANN
  *              All rights reserved
