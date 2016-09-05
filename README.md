@@ -12,11 +12,13 @@ Given a measured microstructure (a height map) the program computes lookup table
 
 ## Libraries
 
-This program has been compiled with : 
+This software has been compiled with : 
 
 * CUDA 7.0
 * OpenCV 2.4.11
 * OpenMP
+
+A .pro file is provided to compile it with QtCreator.
 
 ## Implementation
 
