@@ -7,8 +7,8 @@ It is distributed under the LGPL license.
 Version 1.0
 
 ## Principle
-
-Given a measured microstructure (a height map) the program computes lookup tables that can be used in a fragment shader to render realistic diffraction effects at real-time framerates.
+ 
+Given a measured microstructure (a height map) the program computes lookup tables that can be used in a fragment shader to render realistic diffraction effects at real-time framerates. Please refer to the paper for more information.
 
 ## Libraries
 
