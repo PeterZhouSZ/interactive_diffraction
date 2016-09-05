@@ -140,7 +140,7 @@ void computeLookUpTables(const int N, const int lookUpTableSize, Mat& heightMap,
     vector<float*> integrand_forAllUVLambdaY;
     vector<float*> integrand_forAllUVLambdaZ;
 
-    for(int p = 2 ; p<=2*N ; p++)
+    for(int p = 0 ; p<=2*N ; p++)
     {
 
 #ifdef TIME
@@ -282,8 +282,6 @@ void computeLookUpTables(const int N, const int lookUpTableSize, Mat& heightMap,
 
         //Normalize by the area of the FT
         Ip[p] /= (float)width*(float)height;
-
-        savePFM(Ip[p], string("I2.pfm"));
 
     }//End loop p
 
