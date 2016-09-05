@@ -8,7 +8,8 @@ TEMPLATE = app
 SOURCES += main.cpp \
     diffraction.cpp \
     fourier.cpp \
-    mathfunctions.cpp
+    mathfunctions.cpp \
+    PFMReadWrite.cpp
 
 
 
@@ -16,7 +17,8 @@ HEADERS  += \
     coloursystem.h \
     diffraction.h \
     fourier.h \
-    mathfunctions.h
+    mathfunctions.h \
+    PFMReadWrite.h
 
 ##################### CUDA   ##############################
 

@@ -61,7 +61,7 @@ void computeExample(string filePath)
     heightMap /= 255.0;
 
     //N Taylor terms = 2N+1 look up tables
-    int sizeTables = 501;
+    int sizeTables = 1001;
     int N = 15;
     Mat *Ip = new Mat[2*N+1];
 
@@ -283,8 +283,7 @@ void computeLookUpTables(const int N, const int lookUpTableSize, Mat& heightMap,
         //Normalize by the area of the FT
         Ip[p] /= (float)width*(float)height;
 
-        imshow("I2", Ip[p]);
-        waitKey(0);
+        savePFM(Ip[p], string("I2.pfm"));
 
     }//End loop p
 

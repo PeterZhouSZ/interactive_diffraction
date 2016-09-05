@@ -53,6 +53,7 @@
 #include "fourier.h"
 #include "mathfunctions.h"
 #include "coloursystem.h"
+#include "PFMReadWrite.h"
 
 /*---- Standard library ----*/
 #include <iostream>
