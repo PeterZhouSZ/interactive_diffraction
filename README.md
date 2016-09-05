@@ -9,6 +9,7 @@ Version 1.0
 ## Principle
  
 Given a measured microstructure (a height map) the program computes lookup tables that can be used in a fragment shader to render realistic diffraction effects at real-time framerates. Please refer to the paper for more information.
+Note that this program computes the look-up tables in XYZ colour space for accurate spectrum rendering. A conversion to RGB colour space is necessary to display the final rendering.
 
 ## Libraries
 
