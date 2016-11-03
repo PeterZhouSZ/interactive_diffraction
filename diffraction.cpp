@@ -53,6 +53,11 @@ void computeExample(string filePath)
     //Open a height map as a grayscale image
     Mat heightMap = imread(filePath.c_str(), CV_LOAD_IMAGE_GRAYSCALE);
 
+    if(!heightMap.data)
+    {
+        cerr << "Could not open " << filePath.c_str() << endl;
+    }
+
     imshow("height map",heightMap);
     waitKey(0);
 
@@ -61,7 +66,7 @@ void computeExample(string filePath)
     heightMap /= 255.0;
 
     //N Taylor terms = 2N+1 look up tables
-    int sizeTables = 1001;
+    int sizeTables = 501;
     int N = 15;
     Mat *Ip = new Mat[2*N+1];
 
@@ -70,7 +75,6 @@ void computeExample(string filePath)
     {
        Ip[p] = Mat::zeros(sizeTables,sizeTables, CV_32FC3);
     }
-
 
     //81 wavelengths between 0.38 microns and 0.78 microns at a sampling of 0.005 microns.
     float lambdaMin = (float) 0.38;
@@ -83,7 +87,7 @@ void computeExample(string filePath)
     }
 
     float samplingDistanceInGrating = (float) 0.083;//micrometers
-    computeLookUpTables(30, sizeTables, heightMap, samplingDistanceInGrating, powerSpectrum, 81, (float) 0.005, Ip, lambdaMin, (float)3.0);
+    computeLookUpTables(N, sizeTables, heightMap, samplingDistanceInGrating, powerSpectrum, 81, (float) 0.005, Ip, lambdaMin, (float)3.0);
 
 }
 
